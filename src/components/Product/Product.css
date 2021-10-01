@@ -1,0 +1,21 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightcoral;
+    margin-right: 8px;
+    padding-bottom: 7px;
+}
+.product-name{
+    color: magenta;
+    font-weight: 400;
+}
+.button{
+    background-color: rgb(144, 207, 81);
+    width: 180px;
+    height: 27px;
+    border: lightsalmon;
+    border-radius: 10px 0px 10px 10px;
+    cursor:pointer;
+}
+.icon-color{
+    color: #89f023;
+}
