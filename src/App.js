@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Inventory from './components/Inventory/Inventory';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
+import PleaseOrder from './components/PleaseOrder/PleaseOrder';
 import Shop from './components/Shop/Shop';
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path = '/inventory'>
             <Inventory></Inventory>
+          </Route>
+          <Route path = '/PleaseOrder'>
+            <PleaseOrder></PleaseOrder>
           </Route>
           <Route path = '*'>
             <NotFound></NotFound>
