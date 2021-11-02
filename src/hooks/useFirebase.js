@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut,getIdToken, onAuthStateChanged } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
 const { useState, useEffect } = require("react");
 
@@ -24,6 +24,8 @@ const useFirebase = () => {
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, user => {
             if (user) {
+                getIdToken(user)
+                .then(idToken => localStorage.setItem('idToken',idToken))
               setUser(user)
             } 
           });
